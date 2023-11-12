@@ -14,16 +14,19 @@ class Car {
         this.friction = 0.05;
         this.angle = 0;
 
-        //thas Draw() method just dras reatangle 100px x, and 100px y coordinate. with 20px width and 30px height from constructor 
-        //so we neew a controls
-        // all method and property are defined into controls() class hold on controls.js file
-        this.control = new Controls();
+        /*thas Draw() method just dras reatangle 100px x, and 100px y coordinate. with 20px width and 30px height from constructor 
+        *so we neew a controls
+        * all method and property are defined into controls() class hold on controls.js file
+        */
+       this.control = new Controls();
 
     }
 
 
-    //Update method. update the car position according to updating controls() class paramitter when we pressed the key form keyboard
-    //to make this update mehtod word. we have to loop over and over this method. so animate function into main.js file
+    /*Update method. update the car position according to updating controls() class paramitter when we pressed the key form keyboard
+     *to make this update mehtod work. we have to loop over and over this method. so animate function into main.js file
+     * this basically moving the car.
+     */
     Update() {
         if (this.control.forward) {
             // this.y -=2; 
