@@ -7,9 +7,14 @@ class Car {
         this.width = width;
         this.height = height;
 
+        //thas Draw() method just dras reatangle 100px x, and 100px y coordinate. with 20px width and 30px height from constructor 
+        //so we neew a controls
+        // all method and property are defined into controls() class hold on controls.js file
+        this.control = new Controls();
+
     }
 
-    //car have a draw method. word to draw the can into canvas.Draw method also take an argument ctx which is references to canvas
+    //car have a draw method.  to draw the car into canvas. Draw method also take an arguement ctx which is references to canvas 20 context
     Draw(ctx) {
         ctx.beginPath();
         ctx.rect(
