@@ -12,10 +12,16 @@ const car = new Car(road.getLineCenter(2), canvas.height, 20, 30);
 animate()
 
 function animate() {
-    canvas.height = innerHeight; //canvas height to innerheight 100vh;
     car.Update();
+    canvas.height = innerHeight; //canvas height to innerheight 100vh;
+
+    ctx.save();
+    ctx.translate(0, -car.y + canvas.height * 0.6);
+
     road.Draw();
     car.Draw(ctx);
+
+    ctx.restore();
     requestAnimationFrame(animate)
     // requestAnimationFrame loop over and over in a second.
 }
